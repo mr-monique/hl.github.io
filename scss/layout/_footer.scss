@@ -1,0 +1,71 @@
+@use 'sass:map';
+
+@use '../common/breakpoints' as bp;
+@use '../common/fonts';
+@use '../common/color' as vars;
+@use '../common/mixins' as mixin;
+
+.container__footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    padding: 60px 0 30px;
+}
+
+.map {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+
+    &__address {
+        color: vars.$colorMain;
+    }
+
+    &__link {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: vars.$colorActive;
+    }
+}
+
+.copyright {
+    display: flex;
+    justify-content: flex-end;
+
+    &__text {
+        color: vars.$colorGrey-text;
+    }
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    padding-top: 21px;
+    gap: 26px;
+
+    &__fb {
+        color: vars.$colorActive;
+
+        &:hover {
+            color: vars.$colorAccent;
+            transition: color 0.3s ease;
+        }
+    }
+
+    &__phone {
+        font-weight: 700;
+        color: vars.$colorMain;
+    }
+
+    &__mail {
+        font-weight: 700;
+        color: vars.$colorActive;
+
+        &:hover {
+            color: vars.$colorAccent;
+            transition: color 0.3s ease;
+        }
+    }
+}
