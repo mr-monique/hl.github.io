@@ -7,9 +7,7 @@
 
 .frame {
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    @include mixin.footerGrid;
     padding: 60px 0 30px;
 
     &::after {
