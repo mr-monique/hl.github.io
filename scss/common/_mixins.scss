@@ -21,6 +21,16 @@
     grid-row: 2 / 3;
 }
 
+@mixin mapGrid {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+@mixin linksGrid {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
 @mixin alingCenter {
     display: flex;
     align-items: center;
@@ -29,6 +39,11 @@
 @mixin flexColumn {
     display: flex;
     flex-direction: column;
+}
+
+@mixin flexEnd {
+    display: flex;
+    justify-content: flex-end;
 }
 
 @mixin burger {
@@ -59,4 +74,21 @@
     &:nth-child(3) {
         top: 21px;
     }
+}
+
+@mixin lineFooter {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: vars.$colorGrey-separator;
+    top: 30px;
+}
+
+@mixin lineMenu {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
 }

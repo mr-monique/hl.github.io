@@ -5,34 +5,53 @@
 @use '../common/color' as vars;
 @use '../common/mixins' as mixin;
 
-.container__footer {
+.frame {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     padding: 60px 0 30px;
+
+    &::after {
+        @include mixin.lineFooter;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        @include mixin.flexColumn;
+        align-items: center;
+        margin: 0 30px;
+    }
 }
 
 .map {
-    display: flex;
-    align-items: center;
+    @include mixin.mapGrid;
+    @include mixin.alingCenter;
     gap: 26px;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        order: 1;
+        @include mixin.flexColumn;
+        gap: 10px;
+    }
 
     &__address {
         color: vars.$colorMain;
     }
 
     &__link {
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
+        @extend %fontLanguage;
         color: vars.$colorActive;
     }
 }
 
 .copyright {
-    display: flex;
-    justify-content: flex-end;
+    @include mixin.infoGrid ;
+    @include mixin.flexEnd;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        order: 3;
+        padding-top: 30px;
+    }
 
     &__text {
         color: vars.$colorGrey-text;
@@ -40,10 +59,16 @@
 }
 
 .links {
-    display: flex;
-    align-items: center;
+    @include mixin.linksGrid;
+    @include mixin.alingCenter;
     padding-top: 21px;
     gap: 26px;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        order: 2;
+        @include mixin.flexColumn;
+        gap: 10px;
+    }
 
     &__fb {
         color: vars.$colorActive;

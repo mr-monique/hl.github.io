@@ -56,6 +56,13 @@ body {
   font-weight: 400;
 }
 
+.map__link, .language__link, .language__link--active {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -220,9 +227,6 @@ body {
 .language__link {
   padding: 5px 7px;
   border-radius: 8px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
   color: #FFFFFF;
 }
 .language__link:hover {
@@ -231,9 +235,6 @@ body {
 .language__link--active {
   padding: 5px 7px;
   border-radius: 8px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
   color: #FFFFFF;
   background: #F0145A;
 }
@@ -274,8 +275,8 @@ body {
   position: absolute;
   width: 0;
   height: 2px;
-  background-color: #FFFFFF;
   bottom: -3px;
+  background-color: #FFFFFF;
 }
 .menu__link:hover::before {
   width: 100%;
@@ -289,48 +290,89 @@ body {
 .menu__link--active::before {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 0;
   height: 2px;
-  background-color: #F0145A;
   bottom: -3px;
+  background-color: #F0145A;
 }
 
-.container__footer {
+.frame {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   padding: 60px 0 30px;
 }
+.frame::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #E6E6F0;
+  top: 30px;
+}
+@media (max-width: 767.9px) {
+  .frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 30px;
+  }
+}
 
 .map {
+  grid-column: 1/2;
+  grid-row: 1/2;
   display: flex;
   align-items: center;
   gap: 26px;
+}
+@media (max-width: 767.9px) {
+  .map {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 .map__address {
   color: #323264;
 }
 .map__link {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
   color: #24A3FF;
 }
 
 .copyright {
+  grid-column: 2/3;
+  grid-row: 1/2;
   display: flex;
   justify-content: flex-end;
+}
+@media (max-width: 767.9px) {
+  .copyright {
+    order: 3;
+    padding-top: 30px;
+  }
 }
 .copyright__text {
   color: #B3B3BA;
 }
 
 .links {
+  grid-column: 1/3;
+  grid-row: 2/3;
   display: flex;
   align-items: center;
   padding-top: 21px;
   gap: 26px;
+}
+@media (max-width: 767.9px) {
+  .links {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 .links__fb {
   color: #24A3FF;
