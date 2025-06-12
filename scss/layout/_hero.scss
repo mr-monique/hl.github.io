@@ -14,7 +14,7 @@
 
     &--image {
         position: absolute;
-        top: -118px;
+        top: -120px;
         width: 872.3px;
         height: auto;
 
@@ -61,6 +61,7 @@
 
     @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
         padding-top: 129px;
+        max-width: 200px;
     }
 
     &__title {
