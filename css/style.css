@@ -1,3 +1,55 @@
+.content {
+  width: 1720;
+  height: auto;
+  margin: 0 auto;
+}
+@media (max-width: 1720px) {
+  .content {
+    width: 1440px;
+  }
+}
+@media (max-width: 1440px) {
+  .content {
+    width: 1024px;
+  }
+}
+@media (max-width: 1024px) {
+  .content {
+    width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .content {
+    width: 100%;
+  }
+}
+
+.container {
+  width: 1600px;
+  height: auto;
+  margin: 0 auto;
+}
+@media (max-width: 1720px) {
+  .container {
+    width: 1320px;
+  }
+}
+@media (max-width: 1440px) {
+  .container {
+    width: 904px;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 648px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;

@@ -1,0 +1,47 @@
+@use 'sass:map';
+
+@use './common/breakpoints' as bp;
+
+.content {
+    width: 1720;
+    height: auto;
+    margin: 0 auto;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'xl')) {
+        width: 1440px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
+        width: 1024px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+        width: 768px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        width: 100%;
+    }
+}
+
+.container {
+    width: 1600px;
+    height: auto;
+    margin: 0 auto;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'xl')) {
+        width: 1320px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
+        width: 904px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+        width: 648px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        width: 100%;
+    }
+}
