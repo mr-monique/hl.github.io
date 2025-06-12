@@ -6,6 +6,8 @@
 @use '../common/mixins' as mixin;
 
 .container__header {
+    position: relative;
+    z-index: 1;
     @include mixin.headerGrid;
     padding-top: 50px;
     padding-bottom: 6px;
@@ -22,7 +24,6 @@
 }
 
 .logo {
-    position: relative;
     @include mixin.logoGrid;
     @include mixin.alingCenter;
 

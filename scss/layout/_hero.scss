@@ -1,0 +1,97 @@
+@use 'sass:map';
+
+@use '../common/breakpoints' as bp;
+@use '../common/fonts';
+@use '../common/color' as vars;
+@use '../common/mixins' as mixin;
+
+.section__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: vars.$colorWhite;
+
+    &--image {
+        position: absolute;
+        top: -118px;
+        width: 872.3px;
+        height: auto;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'xl')) {
+            width: 697px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
+            width: 669.9px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+            width: 893.2px;
+            top: -220px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+            width: 523.4px;
+            top: -120px;
+        }
+    }
+}
+
+.hero {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 361px;
+    padding-bottom: 45px;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'xl')) {
+        padding-top: 261px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
+        padding-top: 245px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+        padding-top: 269px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        padding-top: 129px;
+    }
+
+    &__title {
+        font-size: 38px;
+        font-weight: 700;
+        padding-bottom: 405px;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'xl')) {
+            padding-bottom: 305px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
+            padding-bottom: 289px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+            padding-bottom: 417px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+            padding-bottom: 159px;
+            text-align: center;
+        }
+    }
+
+    &__image {
+        color: vars.$colorWhite;
+
+        &:hover {
+            color: vars.$colorAccent;
+        }
+    }
+
+}
