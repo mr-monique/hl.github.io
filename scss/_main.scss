@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth
+}
+
 body {
     @extend %fontMain;
 }
@@ -27,4 +31,9 @@ body {
     width: 100%;
     height: auto;
     background: vars.$colorGrey;
+}
+
+.section {
+    width: 100%;
+    height: auto;
 }

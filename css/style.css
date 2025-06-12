@@ -50,6 +50,12 @@
   }
 }
 
+.section__tabs {
+  width: 1360px;
+  height: auto;
+  margin: 0 auto;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -65,6 +71,10 @@ body {
 
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .general {
@@ -83,6 +93,11 @@ body {
   width: 100%;
   height: auto;
   background: #F5F5FA;
+}
+
+.section {
+  width: 100%;
+  height: auto;
 }
 
 .container__header {
