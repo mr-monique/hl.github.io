@@ -1,11 +1,22 @@
 //Map-key
 @use 'sass:map';
 
+//Main style
 @use './responsive';
 @use './main';
 
-
+//Common
 @use './common/fonts';
 @use './common/color';
 @use './common/mixins';
 @use './common/breakpoints';
+
+//Layout
+@use './layout/header';
+@use './layout/hero';
+@use './layout/tabs';
+@use './layout/assets';
+@use './layout/about';
+@use './layout/brands';
+@use './layout/blog';
+@use './layout/footer';
