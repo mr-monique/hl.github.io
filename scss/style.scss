@@ -2,3 +2,8 @@
 @use 'sass:map';
 
 @use './responsive';
+@use './main';
+
+
+@use './common/fonts';
+@use './common/color';

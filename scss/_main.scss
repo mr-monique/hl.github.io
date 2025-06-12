@@ -1,0 +1,10 @@
+@use './common/fonts';
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    @extend %fontMain;
+}
