@@ -5,6 +5,19 @@
 @use '../common/color' as vars;
 @use '../common/mixins' as mixin;
 
+.brands-title {
+    display: flex;
+    justify-content: center;
+
+    &__text {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: vars.$colorMain;
+    }
+}
+
 .brands {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
