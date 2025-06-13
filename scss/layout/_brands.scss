@@ -26,7 +26,7 @@
     padding-bottom: 60px;
     border-radius: 12px;
 
-    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+    @media (max-width: map.get(bp.$grid-breakpoints, 'xl')) {
         padding-bottom: 0;
     }
 

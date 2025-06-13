@@ -1,0 +1,123 @@
+@use 'sass:map';
+
+@use '../common/breakpoints' as bp;
+@use '../common/fonts';
+@use '../common/color' as vars;
+@use '../common/mixins' as mixin;
+
+.section-blog {
+    padding-top: 30px;
+    background-color: vars.$colorGrey;
+}
+
+.blog-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        padding: 0 30px 30px 30px;
+    }
+
+    &__Link {
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: vars.$colorActive;
+    }
+
+    &__title {
+        font-size: 38px;
+        font-weight: 700;
+        background: vars.$colorRed-text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+            font-size: 30px;
+        }
+    }
+}
+
+.blog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-top: 30px;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px;
+    }
+}
+
+.weblog {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: vars.$colorWhite;
+    border-radius: 8px;
+
+    &__image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    &__block {
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+        }
+    }
+}
+
+.weblog-inner {
+    margin-inline: 30px;
+
+    &__title {
+        font-weight: 700;
+        color: vars.$colorActive;
+        padding-bottom: 15px;
+    }
+
+    &__data {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: vars.$colorGrey-text;
+    }
+
+    &__text {
+        position: relative;
+        padding: 30px 0;
+        font-size: 14px;
+        line-height: 22px;
+        color: black;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 4px;
+            background-color: vars.$colorGrey-separator;
+            top: 15px;
+            left: 0;
+        }
+    }
+}
