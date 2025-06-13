@@ -102,6 +102,8 @@ html {
   height: auto;
   overflow-x: hidden;
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 .header {
@@ -466,6 +468,51 @@ html {
   .breadcrumps__title {
     font-size: 30px;
   }
+}
+
+.container__assets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 60px;
+  padding-bottom: 60px;
+}
+@media (max-width: 1023.9px) {
+  .container__assets {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767.9px) {
+  .container__assets {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767.9px) {
+  .assets {
+    padding: 0 30px;
+  }
+}
+.assets__title {
+  padding-top: 30px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #24A3FF;
+}
+.assets__text {
+  padding-top: 15px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+
+.assets-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 92px;
+  height: 92px;
+  background-color: #FFFFFF;
+  border-radius: 24px;
 }
 
 .frame {

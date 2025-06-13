@@ -19,6 +19,8 @@ body {
     height: auto;
     overflow-x: hidden;
     background: vars.$colorGradient-supersoft;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
 .header {
