@@ -518,6 +518,7 @@ html {
 .brands-title {
   display: flex;
   justify-content: center;
+  padding-top: 60px;
 }
 .brands-title__text {
   font-size: 14px;
