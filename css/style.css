@@ -520,7 +520,13 @@ html {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   padding-top: 30px;
+  padding-bottom: 60px;
   border-radius: 12px;
+}
+@media (max-width: 1023.9px) {
+  .brands {
+    padding-bottom: 0;
+  }
 }
 @media (max-width: 1023.9px) {
   .brands {
