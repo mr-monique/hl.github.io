@@ -1,0 +1,44 @@
+@use 'sass:map';
+
+@use '../common/breakpoints' as bp;
+@use '../common/fonts';
+@use '../common/color' as vars;
+@use '../common/mixins' as mixin;
+
+.breadcrumps {
+    padding: 60px 0;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        padding-bottom: 10px;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: vars.$colorWhite;
+
+        &:hover {
+            color: vars.$colorAccent;
+            transition: color 0.3s ease-in-out;
+        }
+    }
+
+    &__title {
+        font-size: 38px;
+        font-weight: 700;
+        background: vars.$colorRed-text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+            font-size: 30px;
+        }
+    }
+}
