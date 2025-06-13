@@ -1,0 +1,41 @@
+@use 'sass:map';
+
+@use '../common/breakpoints' as bp;
+@use '../common/fonts';
+@use '../common/color' as vars;
+@use '../common/mixins' as mixin;
+
+.brands {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    padding-top: 30px;
+    border-radius: 12px;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        grid-template-columns: 1fr;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+            height: 120px;
+        }
+        @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+            height: auto;
+        }
+
+        &--inactive {
+            @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+                display: none;
+            }
+        }
+    }
+}
