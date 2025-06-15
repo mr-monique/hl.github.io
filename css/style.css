@@ -39,6 +39,8 @@ body {
 .wrapper {
   overflow-x: hidden;
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 .language__link {
@@ -583,6 +585,21 @@ body {
   height: 92px;
   border-radius: 24px;
   background-color: #FFFFFF;
+}
+
+.shadow__before {
+  margin-inline: 20px;
+  height: 10px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: #CACADB;
+}
+.shadow__after {
+  margin-inline: 40px;
+  height: 10px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: #E7E7F2;
 }
 
 /*# sourceMappingURL=style.css.map */
