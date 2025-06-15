@@ -1,0 +1,108 @@
+@use 'sass:map';
+
+@use '../common/fonts';
+@use '../common/color' as vars;
+@use '../common/mixins' as mixin;
+@use '../common/breakpoints' as bp;
+
+.tabs {
+    display: flex;
+    margin-bottom: 60px;
+    padding: 60px 120px 0;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+        flex-direction: column;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        padding-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+.links {
+    @include mixin.flexColumn;
+    box-sizing: content-box;
+    gap: 30px;
+    padding: 14.5px 60px 14.5px 0;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+        flex-direction: row;
+        justify-content: unset;
+        overflow-x: scroll;
+        padding-bottom: 60px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        padding-bottom: 30px;
+        padding-left: 30px;
+    }
+
+
+    &__item {
+        width: 375px;
+        @extend %fontHero;
+        text-align: right;
+        color: vars.$colorGrey-text;
+        white-space: nowrap;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+            font-size: 30px;
+        }
+
+        &:hover {
+            color: vars.$colorAccent;
+            transition: color 0.3s ease;
+        }
+
+        &--active {
+            background: vars.$colorRed-text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            pointer-events: none;
+        }
+    }
+}
+
+.reference {
+    @include mixin.flexColumn;
+    justify-content: center;
+    gap: 30px;
+    width: 861px;
+    padding-left: 60px;
+    color: vars.$colorWhite;
+    border-left: 4px solid rgba(255, 255, 255, 0.3);
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+        padding-left: 0;
+        padding-top: 60px;
+        width: 648px;
+        border-left: none;
+        border-top: 4px solid rgba(255, 255, 255, 0.3);
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        padding: 30px 30px 0;
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+            font-size: 20px;
+        }
+    }
+
+    &__text {
+        font-size: 19px;
+        line-height: 30px;
+    }
+}

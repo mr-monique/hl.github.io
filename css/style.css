@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -44,7 +48,7 @@ body {
   text-transform: uppercase;
 }
 
-.hero__title {
+.links__item, .hero__title {
   font-size: 38px;
   font-weight: 700;
   line-height: 46px;
@@ -281,8 +285,8 @@ body {
 }
 .menu__link--active {
   position: relative;
-  font-weight: 700;
   color: #F0145A;
+  pointer-events: none;
 }
 .menu__link--active::after {
   position: absolute;
@@ -385,6 +389,112 @@ body {
     width: 524px;
     height: 600px;
   }
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 60px;
+  padding: 60px 120px 0;
+}
+@media (max-width: 1439.9px) {
+  .tabs {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 1023.9px) {
+  .tabs {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767.9px) {
+  .tabs {
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  box-sizing: content-box;
+  gap: 30px;
+  padding: 14.5px 60px 14.5px 0;
+}
+@media (max-width: 1023.9px) {
+  .links {
+    flex-direction: row;
+    justify-content: unset;
+    overflow-x: scroll;
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 767.9px) {
+  .links {
+    padding-bottom: 30px;
+    padding-left: 30px;
+  }
+}
+.links__item {
+  width: 375px;
+  text-align: right;
+  color: #B3B3BA;
+  white-space: nowrap;
+}
+@media (max-width: 767.9px) {
+  .links__item {
+    font-size: 30px;
+  }
+}
+.links__item:hover {
+  color: #F0145A;
+  transition: color 0.3s ease;
+}
+.links__item--active {
+  background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  pointer-events: none;
+}
+
+.reference {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  width: 861px;
+  padding-left: 60px;
+  color: #FFFFFF;
+  border-left: 4px solid rgba(255, 255, 255, 0.3);
+}
+@media (max-width: 1023.9px) {
+  .reference {
+    padding-left: 0;
+    padding-top: 60px;
+    width: 648px;
+    border-left: none;
+    border-top: 4px solid rgba(255, 255, 255, 0.3);
+  }
+}
+@media (max-width: 767.9px) {
+  .reference {
+    padding: 30px 30px 0;
+    width: 100%;
+  }
+}
+.reference__title {
+  font-size: 30px;
+  font-weight: 700;
+}
+@media (max-width: 767.9px) {
+  .reference__title {
+    font-size: 20px;
+  }
+}
+.reference__text {
+  font-size: 19px;
+  line-height: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

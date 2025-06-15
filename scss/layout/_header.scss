@@ -173,8 +173,8 @@
 
         &--active {
             position: relative;
-            font-weight: 700;
             color: vars.$colorAccent;
+            pointer-events: none;
 
             &::after {
                 @include mixin.linkLine-active;
