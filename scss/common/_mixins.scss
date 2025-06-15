@@ -1,0 +1,62 @@
+@use "sass:map";
+
+@use '../common/breakpoints' as bp;
+
+@mixin grid1-3 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+
+@mixin alingCenter {
+    display: flex;
+    align-items: center;
+}
+
+
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@mixin linkLine-hover {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -3px;
+}
+
+@mixin linkLine-active {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -3px;
+}
+
+
+
+@mixin arrow {
+    display: flex;
+    align-items: center;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        background-color: #E6E6F0;
+        margin: 0 6px;
+        border-radius: 50%;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+            content: none;
+        }
+    }
+}
