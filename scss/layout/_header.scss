@@ -9,6 +9,8 @@
     @include mixin.grid1-3;
     padding: 50px 0 10px;
     color: vars.$colorWhite;
+    position: relative;
+    z-index: 3;
 
     @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
         @include mixin.flexColumn;
@@ -21,8 +23,7 @@
 
 .logo {
     position: relative;
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
+    @include mixin.positionRow1-3;
     @include mixin.alingCenter;
 
     @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
@@ -49,23 +50,14 @@
 }
 
 .logo-inner {
-    position: absolute;
-    content: "";
-    display: none;
-    width: 32px;
-    height: 32px;
-    right: 15px;
+    @include mixin.burger;
 
     @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
         display: block;
     }
 
     &__line {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 18px;
-        height: 2px;
+        @include mixin.burgerLine;
         background-color: vars.$colorWhite;
 
         &:nth-child(1) {

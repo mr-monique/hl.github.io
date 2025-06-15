@@ -1,0 +1,92 @@
+@use 'sass:map';
+
+@use '../common/fonts';
+@use '../common/color' as vars;
+@use '../common/mixins' as mixin;
+@use '../common/breakpoints' as bp;
+
+.hero {
+    position: relative;
+    @include mixin.flexColumn;
+    align-items: center;
+    z-index: 1;
+    padding-bottom: 30px;
+    margin-top: -7px;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        margin-top: -50px;
+    }
+
+    &__title {
+        @extend %fontHero;
+        color: vars.$colorWhite;
+        margin-top: 361px;
+        margin-bottom: 405px;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'xl')) {
+            margin-top: 261px;
+            margin-bottom: 305px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
+            margin-top: 245px;
+            margin-bottom: 289px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+            margin-top: 269px;
+            margin-bottom: 417px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+            margin-top: 129px;
+            margin-bottom: 159px;
+            width: 315px;
+            text-align: center;
+        }
+    }
+
+    &__link {
+        color: vars.$colorWhite;
+
+        &:hover {
+            color: vars.$colorAccent;
+            transition: color 0.3s ease;
+        }
+    }
+}
+
+.hero-inner {
+    position: absolute;
+    overflow: hidden;
+    @include mixin.flexCenter;
+    width: 100%;
+    z-index: -1;
+    bottom: 0;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+        overflow: visible;
+    }
+
+    &__image {
+        width: 872px;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'xl')) {
+            width: 697px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
+            width: 670px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+            width: 893px;
+            height: 1024px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+            width: 524px;
+            height: 600px;
+        }
+    }
+}

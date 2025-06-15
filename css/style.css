@@ -33,6 +33,7 @@ body {
 }
 
 .wrapper {
+  overflow-x: hidden;
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
 }
 
@@ -43,11 +44,19 @@ body {
   text-transform: uppercase;
 }
 
+.hero__title {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 46px;
+}
+
 .header {
   display: grid;
   grid-template-columns: 1fr 3fr;
   padding: 50px 0 10px;
   color: #FFFFFF;
+  position: relative;
+  z-index: 3;
 }
 @media (max-width: 1023.9px) {
   .header {
@@ -283,6 +292,99 @@ body {
   left: 0;
   bottom: -3px;
   background-color: #F0145A;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  padding-bottom: 30px;
+  margin-top: -7px;
+}
+@media (max-width: 767.9px) {
+  .hero {
+    margin-top: -50px;
+  }
+}
+.hero__title {
+  color: #FFFFFF;
+  margin-top: 361px;
+  margin-bottom: 405px;
+}
+@media (max-width: 1599.9px) {
+  .hero__title {
+    margin-top: 261px;
+    margin-bottom: 305px;
+  }
+}
+@media (max-width: 1439.9px) {
+  .hero__title {
+    margin-top: 245px;
+    margin-bottom: 289px;
+  }
+}
+@media (max-width: 1023.9px) {
+  .hero__title {
+    margin-top: 269px;
+    margin-bottom: 417px;
+  }
+}
+@media (max-width: 767.9px) {
+  .hero__title {
+    margin-top: 129px;
+    margin-bottom: 159px;
+    width: 315px;
+    text-align: center;
+  }
+}
+.hero__link {
+  color: #FFFFFF;
+}
+.hero__link:hover {
+  color: #F0145A;
+  transition: color 0.3s ease;
+}
+
+.hero-inner {
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: -1;
+  bottom: 0;
+}
+@media (max-width: 1023.9px) {
+  .hero-inner {
+    overflow: visible;
+  }
+}
+.hero-inner__image {
+  width: 872px;
+}
+@media (max-width: 1599.9px) {
+  .hero-inner__image {
+    width: 697px;
+  }
+}
+@media (max-width: 1439.9px) {
+  .hero-inner__image {
+    width: 670px;
+  }
+}
+@media (max-width: 1023.9px) {
+  .hero-inner__image {
+    width: 893px;
+    height: 1024px;
+  }
+}
+@media (max-width: 767.9px) {
+  .hero-inner__image {
+    width: 524px;
+    height: 600px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
