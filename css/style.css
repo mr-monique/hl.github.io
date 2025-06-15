@@ -1,3 +1,35 @@
+* * {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.content {
+  width: 1600px;
+  margin-inline: auto;
+}
+@media (max-width: 1599.9px) {
+  .content {
+    width: 1320px;
+  }
+}
+@media (max-width: 1439.9px) {
+  .content {
+    width: 904px;
+  }
+}
+@media (max-width: 1023.9px) {
+  .content {
+    width: 648px;
+  }
+}
+@media (max-width: 767.9px) {
+  .content {
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
