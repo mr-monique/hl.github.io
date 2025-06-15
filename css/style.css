@@ -48,10 +48,17 @@ body {
   text-transform: uppercase;
 }
 
-.links__item, .hero__title {
+.breadcrumps__title, .links__item, .hero__title {
   font-size: 38px;
   font-weight: 700;
   line-height: 46px;
+}
+
+.breadcrumps__link {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .header {
@@ -495,6 +502,39 @@ body {
 .reference__text {
   font-size: 19px;
   line-height: 30px;
+}
+
+.breadcrumps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 60px;
+}
+@media (max-width: 767.9px) {
+  .breadcrumps {
+    padding: 0 30px;
+    margin-bottom: 30px;
+  }
+}
+.breadcrumps__link {
+  display: flex;
+  align-items: center;
+  color: #24A3FF;
+}
+.breadcrumps__link:hover {
+  color: #F0145A;
+}
+.breadcrumps__title {
+  background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+@media (max-width: 767.9px) {
+  .breadcrumps__title {
+    font-size: 30px;
+    line-height: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
